@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>DashServer</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-{{ form }}
+{% block content %}
+<form action="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Submit</button>
+</form>
 
 
-</body>
-</html>
+
+
+{% endblock content %}
