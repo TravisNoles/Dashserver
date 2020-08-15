@@ -6,7 +6,7 @@ from .forms import GameServerForm
 # Create your views here.
 def newgameserver(request):
     form = GameServerForm()
-    return render(request, 'templates/new_game_server.html', {'form': form})
+    return render(request, 'new_game_server.html', {'form': form})
 
 
 #def newgameserver(request):
