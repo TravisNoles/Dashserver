@@ -7,7 +7,15 @@
 <body>
 
 {% block content %}
+<form action="/gamemgr/game/terraria/start" method="post">
+    <label for="gameservers">Game Server: </label>
 
+    <select name="gameservers" id="gameservers">
+        <option value="Terraria">Terraria</option>
+        <option value="Minecraft">Minecraft</option>
+    </select>
+    <input type="submit" value="OK">
+</form>
 
 
 {% endblock content %}
