@@ -7,4 +7,8 @@ class Game(models.Model):
         (1, 'Minecraft'),
     ]
 
-    gameserver = models.CharField(max_length=20, choice=games_list)
+    class Meta:
+        abstract = True
+        app_label = 'dashserver'
+
+    gametype = models.CharField(max_length=20, choices=games_list)

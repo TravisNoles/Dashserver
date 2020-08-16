@@ -1,23 +1,21 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect, HttpResponse
-
 from .forms import GameServerForm
 
 # Create your views here.
 def newgameserver(request):
+
+    if request.method == 'POST':
+        form = GameServerForm(request.POST)
+
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            gametype = form.cleaned_data['gametype']
+            print(name,gametype)
+            print('VALID')
+
+        else:
+            form = GameServerForm()
+
     form = GameServerForm()
     return render(request, 'new_game_server.html', {'form': form})
-
-
-#def newgameserver(request):
-#    ## check for post request
-#    if request.method == 'POST':
-#        form = GameServerForm(request.POST)
-
-        #if form.is_valid():
-        #    return HttpResponseRedirect('/success')
-
-#    else:
-#        form = GameServerForm()
-
-#    return render(request, 'new_game_server.html', {'form': form})
