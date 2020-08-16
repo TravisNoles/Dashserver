@@ -18,4 +18,4 @@ def newgameserver(request):
             form = GameServerForm()
 
     form = GameServerForm()
-    return render(request, 'new_game_server.html', {'form': form})
+    return render(request, 'forms/new_game_server.html', {'form': form})
