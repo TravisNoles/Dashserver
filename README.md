@@ -4,7 +4,7 @@ Open source server manager web application, the project is currently incomplete 
 
 Dashserver is written in Django, a Python Framework, along with HTML with the Django templating engine.
 
-I'm estimating to have a working version by September 2020. 
+I'm estimating to have a basic working version by October 2020. 
 
 # About
 I created this project in order to learn more about Django, since I'm not completely familiar with it. So some of the code may be rough around the edges. Will be creating this project to learn more about Django and to create a useful application to assist with managing my servers. Hopefully others will find this useful as well.
