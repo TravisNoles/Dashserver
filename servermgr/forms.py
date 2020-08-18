@@ -2,7 +2,7 @@ from django import forms
 from .models import Game
 
 
-class GameServerForm(forms.Form):
+class GameServerForm(forms.ModelForm):
     name = forms.CharField(label='Game Server Name: ', max_length=50)
 
     gametype = forms.ChoiceField(choices=[
@@ -12,6 +12,6 @@ class GameServerForm(forms.Form):
 
     class Meta:
         model = Game
-        fields = ('name', 'gametype')
+        fields = ('name', 'port', 'gametype')
 
 

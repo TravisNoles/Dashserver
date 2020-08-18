@@ -13,7 +13,7 @@ def newgameserver(request):
             gametype = form.cleaned_data['gametype']
             print(name,gametype)
             print('VALID')
-
+            form.save()
         else:
             form = GameServerForm()
 
